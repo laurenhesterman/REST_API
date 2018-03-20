@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 // create the schema
-var TaskSchema = new mongoose.Schema({
+var DataSchema = new mongoose.Schema({
     title:  {type: String},
     description: { type: String },
     completed: {type: Boolean, default: 'false'},
@@ -8,7 +8,7 @@ var TaskSchema = new mongoose.Schema({
     updated_at: {type: Date, default: Date.now }
    }) 
 
-   mongoose.model('Task', TaskSchema); 
+   mongoose.model('Data', DataSchema); 
    
 // register the schema as a model
-var Task = mongoose.model('Task', TaskSchema);
+var Data = mongoose.model('Data', DataSchema);

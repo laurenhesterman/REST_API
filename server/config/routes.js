@@ -1,22 +1,22 @@
 var mongoose = require('mongoose');
-var Task = mongoose.model('Task');
-var tasks = require('../controllers/tasks.js');
+var Data = mongoose.model('Data');
+var datas = require('../controllers/datas.js');
 
 
 module.exports = function(app) {
-    app.get("/tasks", (req, res) => { 
-        tasks.show(req, res)
+    app.get("/datas", (req, res) => { 
+        datas.show(req, res)
         })
-    app.get("/tasks/:id", (req, res) => { 
-        tasks.show_one(req, res)
+    app.get("/data/:id", (req, res) => { 
+        datas.show_one(req, res)
         })
-    app.post("/tasks", (req, res) => { 
-        tasks.create(req, res)
+    app.post("/data", (req, res) => { 
+        datas.create(req, res)
         })
-    app.put("/tasks/:id", (req, res) => { 
-        tasks.update(req, res)
+    app.put("/datas/:id", (req, res) => { 
+        datas.update(req, res)
         })
-    app.delete("/tasks/:id", (req, res) => { 
-        tasks.delete(req, res)
+    app.delete("/data/:id", (req, res) => { 
+        datas.delete(req, res)
         })
 }                          
